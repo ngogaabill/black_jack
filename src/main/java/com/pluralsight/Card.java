@@ -5,7 +5,7 @@ public class Card {
     private String suit;
     private boolean isFaceUp;
 
-    public Card(String value, String suit, boolean isFaceUp) {
+    public Card(String value, String suit) {
         this.value = value;
         this.suit = suit;
         this.isFaceUp = false;
@@ -14,7 +14,6 @@ public class Card {
     public String getValue() {
         return value;
     }
-
     public void setValue(String value) {
         this.value = value;
     }
@@ -22,17 +21,15 @@ public class Card {
     public String getSuit() {
         return suit;
     }
+    public void setSuit(String suit) {
+        this.suit = suit;
+    }
 
     public boolean isFaceUp() {
         return isFaceUp;
     }
-
     public void setFaceUp(boolean faceUp) {
         isFaceUp = faceUp;
-    }
-
-    public void setSuit(String suit) {
-        this.suit = suit;
     }
 
     public void flip() {
@@ -60,13 +57,7 @@ public class Card {
                 return 8;
             case "9":
                 return 9;
-            case "10":
-                return 10;
-            case "J":
-                return 10;
-            case "Q":
-                return 10;
-            case "K":
+            case "10", "J", "Q", "K":
                 return 10;
             case "A":
                 return 11;
